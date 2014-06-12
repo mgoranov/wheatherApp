@@ -1,6 +1,7 @@
 AddLocationForm:
 <AddLocationForm>:
     tbSearchLocation:search_box
+    lstSearchResults:search_location
     orientation: "vertical"
     BoxLayout:
         size_hint_y: None
@@ -16,4 +17,5 @@ AddLocationForm:
             text: "Current location"
             size_hint_x: 20
     ListView:
+        id: search_location
         item_strings:["Palo alto MX","Palo alto US"]
