@@ -1,5 +1,6 @@
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
+from kivy.properties import ObjectProperty
 
 
 class WeatherApp(App):
@@ -7,7 +8,11 @@ class WeatherApp(App):
 
 
 class AddLocationForm(BoxLayout):
-    pass
+
+    tbSearchLocation = ObjectProperty()
+
+    def on_search(self):
+        print(self.tbSearchLocation.text)
 
 if __name__ == '__main__':
     WeatherApp().run()

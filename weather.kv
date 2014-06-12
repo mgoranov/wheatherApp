@@ -1,14 +1,17 @@
 AddLocationForm:
 <AddLocationForm>:
+    tbSearchLocation:search_box
     orientation: "vertical"
     BoxLayout:
         size_hint_y: None
         height: "40dp"
         TextInput:
+            id: search_box
             size_hint_x: 60
         Button:
             text: "Search"
             size_hint_x: 20
+            on_press:root.on_search()
         Button:
             text: "Current location"
             size_hint_x: 20
