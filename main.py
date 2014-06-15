@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.properties import ObjectProperty
@@ -28,7 +29,6 @@ class AddLocationForm(BoxLayout):
         cities = ["{} ({})".format(d['name'], d['sys']['country'])
                   for d in data['list']]
         self.lstSearchResults.item_strings = cities
-        # print("\n".join(cities))
 
 
 if __name__ == '__main__':
