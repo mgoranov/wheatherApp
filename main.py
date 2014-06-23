@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+# !/usr/bin/env python
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.properties import ObjectProperty
@@ -6,6 +6,10 @@ from kivy.network.urlrequest import UrlRequest
 
 
 class WeatherApp(App):
+    pass
+
+
+class WeatherRoot(BoxLayout):
     pass
 
 
@@ -24,7 +28,7 @@ class AddLocationForm(BoxLayout):
     def found_location(self, request, data):
         if 'cod' in data:
             if data['cod'] == '404':
-                self.lstSearchResults.item_strings=['Nothing has been found!']
+                self.lstSearchResults.item_strings = ['Nothing has been found!']
                 return
         cities = ["{} ({})".format(d['name'], d['sys']['country'])
                   for d in data['list']]
